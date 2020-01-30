@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import setup_db, Question, Category
 
-os.environ['EXCITED'] = "Excited"
+os.environ['EXCITED'] = "true"
 
 def create_app(test_config=None):
   # create and configure the app
@@ -27,5 +27,8 @@ def create_app(test_config=None):
 
 app = create_app()
 
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=8080, debug=True)
+
 if __name__ == '__main__':
-    APP.run(host='0.0.0.0', port=8080, debug=True)
+      app.run()
